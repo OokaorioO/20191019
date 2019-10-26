@@ -3,6 +3,7 @@ const maxDistance = 200;
 var circlePaths = [];
 var connections = [];
 var canvas;
+var c1, c2;
 
 function windowResized() {
     resizeCanvas(document.body.clientWidth, document.documentElement.clientHeight);
@@ -26,7 +27,11 @@ function setup() {
 
 
 function draw() {
-    background(255);
+    // Define colors
+    c1 = color(255, 220, 0);
+    c2 = color(57, 50, 75);
+    setGradient(c1, c2);
+    // background(255);
     noFill();
     colorMode(RGB, 255, 100, 100, 0.88);
 
@@ -79,6 +84,17 @@ function draw() {
         }
         endShape();
     })
+}
+
+function setGradient(c1, c2) {
+    // noprotect
+    noFill();
+    for (var y = 0; y < height; y++) {
+        var inter = map(y, 0, height, 0, 1);
+        var c = lerpColor(c1, c2, inter);
+        stroke(c);
+        line(0, y, width, y);
+    }
 }
 
 function metaball(ball1, ball2, v, handle_len_rate, maxDistance) {
