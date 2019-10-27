@@ -22,7 +22,7 @@ function setup() {
     } else if (navigator.userAgent.match(/(iPad|iPodPro)/i)) {
         h = 1170;
     } else {
-        h = 1125;
+        h = 1116;
     }
     canvas = createCanvas(document.documentElement.scrollWidth, h);
     canvas.position(0, 0);
