@@ -46,6 +46,7 @@ html,body {
 .image01 img{
     width: 230px;
     height: 480px;
+    border-radius: 20px;
 }
 
 .image01{
