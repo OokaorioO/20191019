@@ -4,13 +4,23 @@ var points,
     backgroundColor,
     pointColors;
 var canvas;
+var h;
 
 function windowResized() {
-    resizeCanvas(windowWidth, windowHeight);
+    resizeCanvas(document.documentElement.scrollWidth, h);
 }
 
 function setup() {
-    canvas = createCanvas(windowWidth, windowHeight);
+    if (navigator.userAgent.match(/(Android)/i)) {
+        h = 900;
+    } else if (navigator.userAgent.match(/(iPhone)/i)) {
+        h = 900;
+    } else if (navigator.userAgent.match(/(iPad|iPodPro)/i)) {
+        h = 1380;
+    } else {
+        h = 1380;
+    }
+    canvas = createCanvas(document.documentElement.scrollWidth, h);
     canvas.position(0, 0);//canvasをページの原点に固定
     canvas.style('z-index', '-1');
     points = new Array(POINT_COUNT);

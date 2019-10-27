@@ -8,13 +8,23 @@ let offset, margin;
 let cellW, cellH;
 let pallete = ["#ffa500", "#FEA98E", "#d1bada", "#ffffe0", "#f5f5f5", "#ffedab", "#fffafa", "#fffaf0"];
 let graphics;
+var h;
 
 function windowResized() {
-    resizeCanvas(document.documentElement.scrollWidth, 1077);
+    resizeCanvas(document.documentElement.scrollWidth, h);
 }
 
 function setup() {
-    canvas = createCanvas(document.documentElement.scrollWidth, 1077);
+    if (navigator.userAgent.match(/(Android)/i)) {
+        h = 1515;
+    } else if (navigator.userAgent.match(/(iPhone)/i)) {
+        h = 1515;
+    } else if (navigator.userAgent.match(/(iPad|iPodPro)/i)) {
+        h = 1180;
+    } else {
+        h = 1180;
+    }
+    canvas = createCanvas(document.documentElement.scrollWidth, h);
     canvas.position(0, 0);
     canvas.style('z-index', '-1');
     colorMode(HSB, 360, 100, 100, 100);
