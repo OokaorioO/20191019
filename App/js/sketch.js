@@ -20,9 +20,9 @@ function setup() {
     } else if (navigator.userAgent.match(/(iPhone)/i)) {
         h = 1515;
     } else if (navigator.userAgent.match(/(iPad|iPodPro)/i)) {
-        h = 1180;
+        h = 1170;
     } else {
-        h = 1180;
+        h = 1125;
     }
     canvas = createCanvas(document.documentElement.scrollWidth, h);
     canvas.position(0, 0);

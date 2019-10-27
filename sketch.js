@@ -16,9 +16,9 @@ function setup() {
     } else if (navigator.userAgent.match(/(iPhone)/i)) {
         h = 900;
     } else if (navigator.userAgent.match(/(iPad|iPodPro)/i)) {
-        h = 1380;
+        h = 1365;
     } else {
-        h = 1380;
+        h = 785;
     }
     canvas = createCanvas(document.documentElement.scrollWidth, h);
     canvas.position(0, 0);//canvasをページの原点に固定
