@@ -16,13 +16,13 @@ function windowResized() {
 
 function setup() {
     if (navigator.userAgent.match(/(Android)/i)) {
-        h = 1515;
+        h = 1500;
     } else if (navigator.userAgent.match(/(iPhone)/i)) {
-        h = 1515;
+        h = 1500;
     } else if (navigator.userAgent.match(/(iPad|iPodPro)/i)) {
-        h = 1170;
+        h = 1195;
     } else {
-        h = 1110;
+        h = 1130;
     }
     canvas = createCanvas(document.documentElement.scrollWidth, h);
     canvas.position(0, 0);

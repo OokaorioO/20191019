@@ -12,13 +12,13 @@ function windowResized() {
 
 function setup() {
     if (navigator.userAgent.match(/(Android)/i)) {
-        h = 900;
+        h = 942;
     } else if (navigator.userAgent.match(/(iPhone)/i)) {
-        h = 900;
+        h = 942;
     } else if (navigator.userAgent.match(/(iPad|iPodPro)/i)) {
-        h = 1365;
+        h = 1350;
     } else {
-        h = 785;
+        h = 1220;
     }
     canvas = createCanvas(document.documentElement.scrollWidth, h);
     canvas.position(0, 0);//canvasをページの原点に固定

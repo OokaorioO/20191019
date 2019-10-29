@@ -15,12 +15,12 @@ var canvas;
 
 function windowResized() {
     // resizeCanvas(document.documentElement.clientWidth, document.body.clientHeight, WEBGL);
-    resizeCanvas(windowWidth, 1205, WEBGL);
+    resizeCanvas(windowWidth, document.documentElement.scrollHeight, WEBGL);
 }
 
 function setup() {
     // canvas = createCanvas(document.documentElement.clientWidth, document.body.clientHeight, WEBGL);
-    canvas = createCanvas(windowWidth, 1205, WEBGL);
+    canvas = createCanvas(windowWidth, document.documentElement.scrollHeight, WEBGL);
     canvas.position(0, 0);//canvasをページの原点に固定
     canvas.style('z-index', '-1');
     angleMode(DEGREES);
